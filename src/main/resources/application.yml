@@ -1,6 +1,13 @@
 spring:
   application:
     name: ai-banking-service
+  ai:
+    openai:
+      chat:
+        options:
+          model: gpt-4.1-mini
+#          max-completion-tokens: 1000
+
 
 logging:
   level:
