@@ -1,22 +1,21 @@
 package com.rajeswarandhandapani.aibankingservice.controller;
 
-import jakarta.validation.constraints.NotBlank;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.ai.support.ToolCallbacks;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContext;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.stringtemplate.v4.compiler.CodeGenerator.primary_return;
 
 import com.rajeswarandhandapani.aibankingservice.ai.llmtools.BankingServiceTools;
 import com.rajeswarandhandapani.aibankingservice.ai.llmtools.DateTimeTools;
 import com.rajeswarandhandapani.aibankingservice.services.BankingClient;
 import com.rajeswarandhandapani.aibankingservice.utils.ApplicationSecurityContext;
-import org.springframework.web.bind.annotation.GetMapping;
+
+import jakarta.validation.constraints.NotBlank;
 
 
 @RestController

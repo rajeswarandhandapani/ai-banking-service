@@ -32,9 +32,9 @@ public class BankingClientConfig {
         return (request, next) -> {
             
             URI uri = request.url();
-            boolean targetIsLocalcost = "localcost".equalsIgnoreCase(uri.getHost()) && uri.getPort() == 4200;
+            boolean targetIsLocalhost = "localhost".equalsIgnoreCase(uri.getHost()) && uri.getPort() == 8080;
 
-            if (targetIsLocalcost && !request.headers().containsKey("Authorization")) {
+            if (targetIsLocalhost && !request.headers().containsKey("Authorization")) {
                 String bearer = ApplicationSecurityContext.getJwt();
                 if (bearer != null && !bearer.isBlank()) {
                     ClientRequest authorized = ClientRequest.from(request)
