@@ -12,4 +12,13 @@ public interface BankingClient {
     @GetExchange(value = "/api/accounts/my-accounts", accept = "application/json")
     Mono<ResponseEntity<Object>> fetchMyAccounts();
 
+    @GetExchange(value = "/api/transactions/my-transactions", accept = "application/json")
+    Mono<ResponseEntity<Object>> fetchMyTransactions();
+
+    @GetExchange(value = "/api/payments/my-payments", accept = "application/json")
+    Mono<ResponseEntity<Object>> fetchMyPayments();
+
+    @GetExchange(value = "/api/notifications/my-notifications", accept = "application/json")
+    Mono<ResponseEntity<Object>> fetchMyNotifications();
+
 }
