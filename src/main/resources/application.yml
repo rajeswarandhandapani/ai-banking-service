@@ -9,8 +9,11 @@ spring:
           temperature: 1
 #          max-completion-tokens: 1000
 
+server:
+  port: 8082
 
 logging:
   level:
     root: INFO
+    com.rajeswarandhandapani: DEBUG
     org.springframework.ai: DEBUG
